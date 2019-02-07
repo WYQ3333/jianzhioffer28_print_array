@@ -33,7 +33,7 @@ public:
 				count++;
 			}
 			row2--;
-			for (j=row2; j > row1; --j){
+			for (j=row2; j >= row1; --j){
 				cout << matrix[j][i] << " ";
 				count++;
 			}
