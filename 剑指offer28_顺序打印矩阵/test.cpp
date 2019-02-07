@@ -15,7 +15,7 @@ public:
 		int i = 0;//代表列
 		int j = 0;//代表行
 		int temp = (col2*row2);
-		while (count < temp){
+		while (count != temp){
 			for (i = col1; i < col2; ++i){
 				cout << matrix[j][i] << " ";
 				count++;
@@ -28,17 +28,15 @@ public:
 			}
 			col2--;
 			j = row2 - 1;
-			for (i; i>= col1; --i){
+			for (i=col2-1; i> col1; --i){
 				cout << matrix[j][i] << " ";
 				count++;
 			}
-			i = col1 + 1;
 			row2--;
-			for (j; j >= row1; --j){
+			for (j=row2; j > row1; --j){
 				cout << matrix[j][i] << " ";
 				count++;
 			}
-			j = row1 + 1;
 			col1++;
 		}
 	}
