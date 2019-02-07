@@ -12,26 +12,34 @@ public:
 		int col1 = 0;//0列
 		int row2 = matrix.size();//matrix.size()行
 		int col2 = matrix[0].size();//matrix[0].size()列
-		int i = 0;
-		int j = 0;
-		while (count < (col2*row2)){
+		int i = 0;//代表列
+		int j = 0;//代表行
+		int temp = (col2*row2);
+		while (count < temp){
 			for (i = col1; i < col2; ++i){
-				cout << matrix[i][j] << " ";
+				cout << matrix[j][i] << " ";
+				count++;
 			}
 			row1++;
 			i = col2 - 1;
 			for (j = row1; j < row2; ++j){
-				cout << matrix[i][j] << " ";
+				cout << matrix[j][i] << " ";
+				count++;
 			}
 			col2--;
 			j = row2 - 1;
-			for (i; i>col1; --i){
-				cout << matrix[i][j] << " ";
+			for (i; i>= col1; --i){
+				cout << matrix[j][i] << " ";
+				count++;
 			}
+			i = col1 + 1;
 			row2--;
-			for (j; j > row1; --j){
-				cout << matrix[i][j] << " ";
+			for (j; j >= row1; --j){
+				cout << matrix[j][i] << " ";
+				count++;
 			}
+			j = row1 + 1;
+			col1++;
 		}
 	}
 };
